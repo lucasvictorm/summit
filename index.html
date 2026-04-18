@@ -20,7 +20,7 @@
             },
             colors: {
               summit: {
-                red: "#D92D20",
+                red: "#e33335",
                 dark: "#101828",
                 light: "#F2F4F7",
               },
@@ -30,7 +30,6 @@
       };
     </script>
     <style>
-      /* Imagem de fundo principal com overlay escuro */
       .hero-bg {
         background-image:
           linear-gradient(rgba(16, 24, 40, 0.8), rgba(16, 24, 40, 0.9)),
@@ -64,6 +63,9 @@
             >
             <a href="#orientacoes" class="hover:text-summit-red transition"
               >Orientações</a
+            >
+            <a href="#gog" class="hover:text-summit-red transition"
+              >Documentação</a
             >
           </div>
         </div>
@@ -595,6 +597,47 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gog" class="py-16 bg-gray-50 border-t border-gray-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8"
+          data-aos="zoom-in"
+        >
+          <div>
+            <h3 class="text-2xl font-bold text-summit-dark mb-2">
+              Precisa de mais detalhes?
+            </h3>
+            <p class="text-gray-600">
+              Acesse o nosso
+              <strong>GOG (Guia de Orientações Gerais)</strong> para ler todas
+              as regras, orientações de conduta, horários e detalhes completos
+              sobre a infraestrutura do evento.
+            </p>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1OkKIcqUfvr00DdhAkR_Mqv92BaWdZkm1/view?usp=drivesdk"
+            target="_blank"
+            class="flex-shrink-0 inline-flex items-center gap-2 bg-summit-dark text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-800 transition shadow-md whitespace-nowrap"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              ></path>
+            </svg>
+            Ler GOG Completo
+          </a>
         </div>
       </div>
     </section>
