@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUMMIT - Retiro Jovem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              summit: {
+                red: "#D92D20",
+                dark: "#101828",
+                light: "#F2F4F7",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Imagem de fundo principal com overlay escuro */
+      .hero-bg {
+        background-image:
+          linear-gradient(rgba(16, 24, 40, 0.8), rgba(16, 24, 40, 0.9)),
+          url("https://images.unsplash.com/photo-1523580494112-071dcb849ea4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="bg-summit-light text-gray-800 antialiased">
+    <nav
+      class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-gray-200/50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div
+            class="flex-shrink-0 font-extrabold text-2xl tracking-tighter text-summit-dark"
+          >
+            SUMMIT<span class="text-summit-red">.</span>
+          </div>
+          <div class="hidden md:flex space-x-8 font-medium text-sm">
+            <a href="#sobre" class="hover:text-summit-red transition"
+              >O Evento</a
+            >
+            <a href="#objetivos" class="hover:text-summit-red transition"
+              >Objetivos</a
+            >
+            <a href="#inscricao" class="hover:text-summit-red transition"
+              >Inscrições</a
+            >
+            <a href="#orientacoes" class="hover:text-summit-red transition"
+              >Orientações</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-bg min-h-screen flex items-center justify-center pt-20">
+      <div class="text-center px-4" data-aos="fade-up" data-aos-duration="1000">
+        <h2
+          class="text-summit-red font-bold tracking-widest uppercase mb-4 text-sm md:text-base"
+        >
+          Guia de Orientações Gerais
+        </h2>
+        <h1
+          class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6"
+        >
+          O ALTO É MAIS QUE<br />UM MOMENTO.
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-300 font-light mb-10 max-w-2xl mx-auto"
+        >
+          É uma convocação espiritual. Desconecte-se da rotina e venha viver uma
+          experiência marcante.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+        >
+          <div
+            class="bg-white/10 backdrop-blur border border-white/20 text-white px-6 py-3 rounded-xl flex items-center gap-3"
+          >
+            <svg
+              class="w-6 h-6 text-summit-red"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span class="font-semibold text-left"
+              >08 a 12 de Outubro<br /><span
+                class="text-xs font-normal text-gray-300"
+                >Quinta a Segunda</span
+              ></span
+            >
+          </div>
+          <div
+            class="bg-white/10 backdrop-blur border border-white/20 text-white px-6 py-3 rounded-xl flex items-center gap-3"
+          >
+            <svg
+              class="w-6 h-6 text-summit-red"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+            <span class="font-semibold text-left"
+              >Chácara Bom Pastor<br /><span
+                class="text-xs font-normal text-gray-300"
+                >Benevides - PA</span
+              ></span
+            >
+          </div>
+        </div>
+
+        <a
+          href="#sobre"
+          class="animate-bounce inline-block text-white/50 hover:text-white"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <section id="sobre" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div data-aos="fade-right" class="flex justify-center">
+            <img
+              src="./summit-logo.png"
+              alt="Logotipo do SUMMIT"
+              class="w-full max-w-sm object-contain drop-shadow-2xl"
+            />
+          </div>
+          <div data-aos="fade-left">
+            <h3 class="text-summit-red font-bold mb-2">O QUE É O SUMMIT?</h3>
+            <h2 class="text-4xl font-extrabold text-summit-dark mb-6">
+              Muito mais que um simples retiro.
+            </h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              É um movimento que nasce com o propósito de transformar vidas.
+              Criado especialmente para quem deseja viver algo diferente, mais
+              profundo e verdadeiro com Deus.
+            </p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Um lugar de experiências marcantes, amizades sinceras, momentos de
+              reflexão, crescimento pessoal e decisões que podem mudar o rumo da
+              sua vida. No SUMMIT, você não apenas participa...
+              <strong>você vive</strong>.
+            </p>
+            <div
+              class="bg-gray-50 border-l-4 border-summit-red p-4 rounded-r-lg"
+            >
+              <p class="font-medium text-summit-dark">
+                Público-Alvo: Jovens de 16 a 30 anos.
+              </p>
+              <p class="text-sm text-gray-500">
+                Jovens de igrejas locais, interessados e diretores/líderes do
+                Ministério Jovem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="objetivos" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-extrabold text-summit-dark">
+            Nossos Objetivos
+          </h2>
+          <p class="mt-4 text-gray-600">
+            O que buscamos alcançar durante nossos dias juntos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-summit-red mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-summit-dark mb-3">
+              Fortalecimento Espiritual
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Proporcionar uma conexão mais profunda com Deus através de
+              momentos de reflexão, oração e adoração.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-summit-red mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-summit-dark mb-3">
+              Relacionamentos Saudáveis
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Incentivar a construção de amizades verdadeiras e um forte senso
+              de comunidade entre os participantes.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-summit-red mb-6"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-summit-dark mb-3">
+              Descoberta de Propósito
+            </h3>
+            <p class="text-gray-600 text-sm">
+              Levar cada participante a entender seu papel e chamado, além de
+              prepará-los para serem líderes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inscricao" class="py-24 bg-summit-dark text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
+              Informações de Inscrição
+            </h2>
+            <p class="text-gray-400 mb-8">
+              As inscrições serão realizadas exclusivamente pelo Sistema Eventos
+              da Igreja de forma individual via CPF.
+            </p>
+
+            <div class="space-y-6">
+              <div
+                class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10"
+              >
+                <div class="bg-summit-red text-white p-3 rounded-lg font-bold">
+                  1º Lote
+                </div>
+                <div>
+                  <h4 class="font-semibold">Jovens Adventistas</h4>
+                  <p class="text-sm text-gray-400">27 de abril a 04 de maio</p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10"
+              >
+                <div class="bg-gray-600 text-white p-3 rounded-lg font-bold">
+                  2º Lote
+                </div>
+                <div>
+                  <h4 class="font-semibold">Amigos e Interessados</h4>
+                  <p class="text-sm text-gray-400">13 a 20 de maio</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 p-6 bg-summit-red rounded-2xl">
+              <h3
+                class="text-sm uppercase tracking-wider font-bold opacity-80 mb-1"
+              >
+                Valor do Investimento
+              </h3>
+              <div class="text-5xl font-extrabold mb-2">R$ 190,00</div>
+              <p class="text-sm opacity-90">
+                Formas de pagamento: PIX à vista ou Cartão de Crédito em até 2x.
+              </p>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm"
+          >
+            <h3 class="text-xl font-bold mb-6">O que a inscrição garante?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-green-400 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-300">Transporte (ida e volta)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-green-400 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-300"
+                  >Alimentação semi-vegetariana completa durante o evento</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-green-400 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-300"
+                  >Estadia no local (Alojamentos separados por gênero)</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-green-400 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-300"
+                  >Acesso total à programação e dinâmicas</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <svg
+                  class="w-6 h-6 text-green-400 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-300">Brinde exclusivo do SUMMIT</span>
+              </li>
+            </ul>
+            <div class="mt-8 pt-8 border-t border-white/10">
+              <p class="text-xs text-center text-gray-500 mt-4">
+                *A entrada no evento só será liberada com o QR Code oficial após
+                confirmação de pagamento no sistema oficial que será divulgado
+                em breve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="orientacoes" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl font-extrabold text-summit-dark">
+            Infraestrutura e Orientações
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="flex-shrink-0 w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Alojamento</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-2">
+                Dividido em Ala 1 (Homens) e Ala 2 (Mulheres) em dormitórios
+                coletivos com banheiros completos.
+              </p>
+              <p class="text-sm font-semibold text-summit-dark">
+                Atenção: Leve sua própria rede ou colchão (conforme escolhido na
+                inscrição) e itens de cama pessoal.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="flex-shrink-0 w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Alimentação</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-2">
+                Todas as refeições inclusas. O cardápio seguirá o padrão
+                <strong>semi-vegetariano</strong>, podendo haver opções com
+                frango/peixe pontualmente.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="flex-shrink-0 w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Vestimentas e Modéstia</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-2">
+                Pedimos que os princípios da modéstia cristã sejam seguidos em
+                todos os momentos, inclusive recreativos. Evite roupas
+                excessivamente justas, curtas ou transparentes.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-6" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="flex-shrink-0 w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-7 h-7 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Saúde e Conduta</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-2">
+                Teremos equipe de saúde de plantão. Lembre-se de levar
+                medicamentos de uso contínuo.<br />Comporte-se com espírito
+                cristão: cuide do espaço, respeite os horários e evite uso
+                excessivo de celulares.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-center items-center"
+      >
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <div class="font-extrabold text-2xl tracking-tighter mb-2">
+            SUMMIT<span class="text-summit-red">.</span>
+          </div>
+          <p class="text-gray-500 text-sm">
+            O alto é mais que um momento. É uma convocação espiritual.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 100,
+      });
+    </script>
+  </body>
+</html>
